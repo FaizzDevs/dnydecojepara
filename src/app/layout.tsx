@@ -31,6 +31,7 @@ export default function RootLayout({
             <body className={`${notoSerif.variable} ${manrope.variable} font-body bg-background text-on-background antialiased`}>
                 <Providers>
                     <Navbar />
+                    <main>{children}</main>
                 </Providers>
             </body>
         </html>
