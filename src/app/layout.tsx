@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Manrope, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import { Providers } from "../Components/Providers";
 import { Navbar } from "@/Components/Layout/Navbar";
+import { Footer } from "@/Components/Layout/Footer";
+import { WhatsAppFab } from "@/Components/ui/WhatsApp-Fab";
 
 const notoSerif = Noto_Serif({
     variable: "--font-noto-serif",
@@ -32,6 +34,8 @@ export default function RootLayout({
                 <Providers>
                     <Navbar />
                     <main>{children}</main>
+                    <Footer />
+                    <WhatsAppFab />
                 </Providers>
             </body>
         </html>

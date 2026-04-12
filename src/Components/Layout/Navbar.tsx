@@ -26,7 +26,7 @@ export function Navbar() {
         <nav className="fixed top-0 w-full z-50 bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl border-b border-stone-200/10 shadow-sm">
             <div className="flex justify-between items-center px-6 md:px-12 py-6 max-w-full">
                 <Link href='/' className="text-2xl font-serif italic tracking-widest text-primary dark:text-[#D2B48C]">
-                    Dny Deco Jepara
+                    Dny Deco & Furniture Jepara
                 </Link>
 
                 <div className="hidden md:flex gap-10 items-center">

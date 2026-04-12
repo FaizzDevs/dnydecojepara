@@ -16,7 +16,7 @@ export default function HomePage() {
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image 
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Y52vbDAXFdacMmeuCAb0sTfP_Cs1D6M9Sn61anDOrjhHIJGq3aK2eH8v53xP2Z2bDRqntG5hFlj2eW_CEIPzqXneOrEg5IQUOsxQibgCqiv4rPGgsnrKhN9eq0EQ9LXuWqPD5r_capj-YgGfnc6G4GN3GOuDh2XhxHUHhqt6wRePJmbNDLFapFtg22LH0NJ9EFYy-KWGWeh8LPK0Hu7774HF8pspBv2wVfEBGnFQbT2ooEdRY-pyv36oX-L5HsWF20vICqJY1ks"
+                        src="/gambar1.jpeg"
                         alt="Luxurious modern living room"
                         fill
                         className="object-cover scale-105"
@@ -76,24 +76,55 @@ export default function HomePage() {
 
             <section className="py-32 px-6 md:px-12 bg-background">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                        <Card>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="group hover:-translate-y-2 transition-transform duration-500"
+                    >
+                        <Card className="bg-surface-container-highest border-none rounded-xl p-12 min-h-100 flex flex-col items-start justify-between">
                             <div>
-                                <MessageCircle />
-                                <h3>
+                                <MessageCircle className="text-primary w-12 h-12 mb-6" />
+                                <h3 className="text-3xl font-headline mb-4">
                                     Talk to out Experts
                                 </h3>
-                                <p>
+                                <p className="text-muted-foreground max-w-sm mb-8">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci maxime amet eligendi, fugiat officia sint laudantium odio aliquam alias nesciunt?
                                 </p>
                             </div>
 
-                            <Button>
-                                <MessageCircle />
+                            <Button className="bg-[#25D366] text-white hover:bg-[#25D366]/90 rounded-full px-8 py-6">
+                                <MessageCircle className="w-5 h-5 mr-2" />
                                 WhatsApp Consulting
                             </Button>
                         </Card>
-                    </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="group hover:-translate-y-2 transition-transform duration-500"
+                    >
+                        <Card className="bg-stone-900 text-white border-none rounded-xl p-12 min-h-100 flex flex-col items-start justify-between">
+                            <div>
+                                <ShoppingBag className="text-primary-fixed-dim w-12 h-12 mb-6" />
+                                <h3 className="text-3xl font-headline mb-4">
+                                    Visit our Shopee Store
+                                </h3>
+                                <p className="text-stone-400 max-w-sm mb-8">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id accusantium quod hic.
+                                </p>
+                            </div>
+
+                            <Button className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-6">
+                                <ShoppingBag className="w-5 h-5 mr-2" />
+                                Show Now on Shopee
+                            </Button>
+                        </Card>
+                    </motion.div>
                 </div>
             </section>
         </>
