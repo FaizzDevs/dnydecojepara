@@ -184,3 +184,24 @@ export const productData: Record<string, ProductDetail> = {
         ],
     },
 }
+
+export const relatedProducts = [
+    {
+        id: 'lunar-side-table',
+        name: 'Lunar Side Table',
+        price: 420,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDgs3M_nuHH_BYOXoihH5AE1RQHRLdcH0bAuhtsBnBMLcM87nKteox-7cGLOP8fo4iMjMJMmS7t4z-Sfla2oFj4jf4C2CVre-VZQ6XyVwyP48vkHeP071wauECXn3qhkLrTRFmaSXatUIGRXsTHGFrcoGRYtWzhEAwla0xNeYiZEjxKHCm8khNn5Oh6kCbWtJugRUIiIGLpXprHsoGFPppYQy5whSSjz65Q3hThI4tfOb0QqInl1OZOef4cjCF6jYIzEJzgNZDLJik',
+    },
+    {
+        id: 'vessel-no-4',
+        name: 'Vessel No. 4',
+        price: 215,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDlPhXfKCYr3CkSvT77ZkUeUleV9a9AtwrA8SKO4ahM0wBlUKqBpc2vK4YLRgq1Xie9-i7ZnIoDVpAsbMHFp_3Ia41omfl9PERoGwNP3hwjPiH_OGflbL56vP87vs1nu3O5HNlZwEHfxxvOs5SNWxMG107ju-uRqz4IvgLAr6cCQj2IBlqNwMjozMs3IWHRKRnm0sCdBlQKbjdl-Z6ScV1keIcIzVDAcMtLY2cpL7_SRnD5Mbsm90q_K6Sn-ATYg1k3FqPBJ0RBf5A',
+    },
+    {
+        id: 'kanso-floor-lamp',
+        name: 'Kanso Floor Lamp',
+        price: 680,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBvVJxyaiD73qJJeDqMEVVNqjBETljlxgnWwFF3HRrkmfa1AVlPNqoP9gP8SnkWnwaEamWTZJUSQ7UQ-ShHBsoT_Q3398V742le1CO-HJRDnW7U0tlB2FEf6ka7UYR2j1smTudUuQorteZ-AdrxDDaMn6DbKO2U5BxO4raO86zxqFprVrnQNjl9ajLu13nb8AGMPmNa2xfNN1M_dHXFfNixlGYPanpj18LI5LP0YlcXFLamz-R0PdrCiZSq89gAP1NdyIyNerwJhsk',
+    },
+]

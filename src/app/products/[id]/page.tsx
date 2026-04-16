@@ -1,16 +1,40 @@
 import { notFound } from "next/navigation"
-import { productData } from "./data/Product-Data"
+import { productData, relatedProducts } from "./data/Product-Data"
 import { ProductImageGallery } from "./components/Product-Image-Gallery"
 import { ProductInfo } from "./components/Product-Info"
 import { ProductSpecs } from "./components/Product-Specs"
 import { ProductBespoke } from "./components/Product-Bespoke"
 import { ProductActions } from "./components/Product-Actions"
 import { ProductCare } from "./components/Product-Care"
+import { RelatedProducts } from "./components/Related-Products"
 
 interface ProductDetailPageProps {
     params: {
         id: string
     }
+}
+
+function getRandomRelatedProducts(currentId: string, count: number = 3) {
+    const otherProductIds = Object.keys(productData).filter(id => id !== currentId)
+
+    const shuffled = [...otherProductIds]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+
+    const selectedIds = shuffled.slice(0, count)
+
+    return selectedIds.map(id => {
+        const product = productData[id]
+        return {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.mainImage,
+            category: product.subcategory
+        }
+    })
 }
 
 export async function generateStaticParams() {
@@ -26,6 +50,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     if (!product) {
         notFound()
     }
+
+    const relatedProducts = getRandomRelatedProducts(id, 3)
 
     return (
         <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
@@ -60,6 +86,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     <ProductCare />
                 </div>
             </div>
+
+            <RelatedProducts products={relatedProducts} />
         </main>
     )
 }
